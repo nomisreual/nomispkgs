@@ -1,0 +1,90 @@
+{
+  "nodes": {
+    "git_alert": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760787361,
+        "narHash": "sha256-MY/YBK3T2O7IiEP/7YfUo7wJtcD5vE81EWlyJycTTG0=",
+        "owner": "nomisreual",
+        "repo": "git_alert",
+        "rev": "1dbb56f18f674d879163e9af8385bd64339323c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "git_alert",
+        "type": "github"
+      }
+    },
+    "mediaplayer": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760704373,
+        "narHash": "sha256-dDGAWRJz6hovbsI+psKacg814rY1Jkd8nquhNQTy/bk=",
+        "owner": "nomisreual",
+        "repo": "mediaplayer",
+        "rev": "b0fef094810abc54cbf5a271c8534ffe8d6e1394",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "mediaplayer",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1762844143,
+        "narHash": "sha256-SlybxLZ1/e4T2lb1czEtWVzDCVSTvk9WLwGhmxFmBxI=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9da7f1cf7f8a6e2a7cb3001b048546c92a8258b4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "git_alert": "git_alert",
+        "mediaplayer": "mediaplayer",
+        "nixpkgs": "nixpkgs",
+        "sessionizer": "sessionizer"
+      }
+    },
+    "sessionizer": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1761910102,
+        "narHash": "sha256-3MWbu83A8x47+Xfr2Ba6BwrBnE5xr3iY9wywu3iQQmE=",
+        "owner": "nomisreual",
+        "repo": "sessionizer",
+        "rev": "2d4ad4bdc56b2a9fe93503c8644347c2ef6e7c6e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "sessionizer",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
