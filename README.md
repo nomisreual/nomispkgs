@@ -28,13 +28,14 @@ As with other flakes, this flake can be added to your flake as input.
   outputs = {
     self,
     nixpkgs,
-    nomispkgs,
     ...
   } @ inputs: {
     # your configurations
   };
 }
 ```
+
+Don't forget to pass in *inputs* via *specialArgs* or *extraSpecialArgs* to your configuration builder and also remember to add *inputs* to the relevant configuration file.
 
 You can then add any of the provided packages to your configuration. For example:
 
@@ -44,7 +45,7 @@ You can then add any of the provided packages to your configuration. For example
   environment.systemPackages = with pkgs; [
     ...
 
-    nomispkgs.packages.<YOUR_ARCHITECTURE>.<PACKAGE_NAME>
+    inputs.nomispkgs.packages.<YOUR_ARCHITECTURE>.<PACKAGE_NAME>
     ...
   ];
 }
@@ -53,7 +54,7 @@ You can then add any of the provided packages to your configuration. For example
   home.packages = with pkgs; [
     ...
 
-    nomispkgs.packages.<YOUR_ARCHITECTURE>.<PACKAGE_NAME>
+    inputs.nomispkgs.packages.<YOUR_ARCHITECTURE>.<PACKAGE_NAME>
     ...
   ];
 }
