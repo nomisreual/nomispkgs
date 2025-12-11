@@ -40,10 +40,11 @@
     packages = forAllSystems ({
       pkgs,
       system,
-    }: {
+    }: rec {
       mediaplayer = mediaplayer.packages.${system}.default;
       git_alert = git_alert.packages.${system}.default;
       sessionizer = sessionizer.packages.${system}.default;
     });
+    mediaplayer = packages.mediaplayer;
   };
 }
