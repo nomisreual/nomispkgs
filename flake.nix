@@ -3,15 +3,15 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    mediaplayer = {
+    mediaplayer_ = {
       url = "github:nomisreual/mediaplayer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    git_alert = {
+    git_alert_ = {
       url = "github:nomisreual/git_alert";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sessionizer = {
+    sessionizer_ = {
       url = "github:nomisreual/sessionizer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -20,9 +20,9 @@
   outputs = {
     self,
     nixpkgs,
-    mediaplayer,
-    git_alert,
-    sessionizer,
+    mediaplayer_,
+    git_alert_,
+    sessionizer_,
   }: let
     allSystems = [
       "x86_64-linux"
@@ -42,8 +42,8 @@
       system,
     }: rec {
       mediaplayer = mediaplayer.packages.${system}.default;
-      git_alert = git_alert.packages.${system}.default;
-      sessionizer = sessionizer.packages.${system}.default;
+      git_alert = git_alert_.packages.${system}.default;
+      sessionizer = sessionizer_.packages.${system}.default;
     });
   };
 }
