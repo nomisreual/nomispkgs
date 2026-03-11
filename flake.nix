@@ -42,7 +42,7 @@
       system,
     }: rec {
       mediaplayer = mediaplayer.packages.${system}.default;
-      git_alert = git_alert_.packages.${system}.default;
+      git_alert = git_alert_.packages.${system}.pkg;
       sessionizer = sessionizer_.packages.${system}.default;
     });
   };
