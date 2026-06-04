@@ -15,6 +15,10 @@
       url = "github:nomisreual/sessionizer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    awww-info_ = {
+      url = "github:nomisreual/awww_info";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -23,6 +27,7 @@
     mediaplayer_,
     git_alert_,
     sessionizer_,
+    awww-info_,
   }: let
     allSystems = [
       "x86_64-linux"
@@ -41,9 +46,10 @@
       pkgs,
       system,
     }: rec {
-      mediaplayer = mediaplayer.packages.${system}.default;
+      mediaplayer = mediaplayer_.packages.${system}.default;
       git_alert = git_alert_.packages.${system}.pkg;
       sessionizer = sessionizer_.packages.${system}.default;
+      awww-info = awww-info_.packages.${system}.default;
     });
   };
 }
